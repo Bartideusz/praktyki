@@ -1,0 +1,302 @@
+body{
+  background-color: #539987;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+                             
+}
+
+#root{
+  margin: -8px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*NAGŁÓWEK*/
+.banner{
+  width: 30%;
+  height: 6vw;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background-color: #131936;
+
+  border: 3px yellow solid;
+  border-radius: 0px 0px 30px 0px;
+
+  font-size: 0.7vw;
+  padding:0px 10px 0px 10px;
+  
+  float: left;
+}
+
+.logo{
+  height: 5vw;
+  padding-right: 1vw;
+}
+
+/*MENU*/
+.menu{
+  width: 6vw;
+  height: 6vw;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color:#131936;
+  border: 3px yellow solid;
+  border-radius: 0px 0px 0px 30px;
+  
+  float: right;
+}
+
+.menu-buttons{
+  display: none;
+}
+
+.menu-buttons>button{
+  padding: 5px;
+  margin: 5px;
+
+  font-size: 1.4vw;
+}
+
+.menu-buttons>h1{
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+}
+
+.menu-img{
+  height: 2.5vw;
+}
+
+.menu:hover{
+  width: 14vw;
+  height: auto;
+  padding-bottom: 10px;
+  background-color: #131936;
+}
+
+.menu:hover>.menu-buttons{
+  display: flex;
+  flex-direction: column;
+}
+.menu:hover>.menu-img{
+  display: none;
+}
+
+/*PRZYCISKI*/
+.any-button, .open-button, .btn {
+  border: 3px yellow solid;
+  color: white;
+  background-color: #131936;
+  border-radius: 1vw 0.5vw;
+  cursor: pointer;
+  font-size: 1vw;
+}
+
+.btn{
+  width: 150px;
+}
+
+.table-button {
+  margin-top: 10px;
+}
+.any-button:hover, .open-button:hover{
+  background-color: #093649;
+  border-color: white;
+}
+
+/*TABELA*/
+.tabela{
+  display: flex;
+  flex-direction: column;
+
+  width: 97vw;
+  height: 35vw;
+  margin: 1vw;
+  padding: 0px;
+
+  background-color:#131936;
+  border: solid 3px yellow;
+  overflow: auto;
+}
+
+.bar{
+  display: grid;
+      /*Id|Laborant|Ilość|Miejsce|Nazwa|Inwentarz|Użytkonik|Rodzaj|Typ|Wybrakowanie|Edytuj|Usuń*/
+  grid-template-columns: 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw 8vw;
+  background-color: white;
+
+  font-size: 1vw;
+}
+
+.pointer, .bar > button {
+  cursor: pointer;
+}
+
+.bar:nth-child(even)>*{
+  background-color: lightgrey;
+}
+
+.bar>:nth-child(11), .bar>:nth-child(12){
+  background-color: transparent;
+}
+
+.bar-td, .bar > p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 50px;
+
+  border: black solid 1px;
+  text-align: center;
+  color: black;
+  padding: 0px;
+  margin: 0px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/*PANEL*/
+.panel{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+
+  margin: 7vw 15vw 0px 1vw;
+  font-size: 1.2vw;
+}
+
+/*FILTR*/
+.filtr{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 97vw;
+  height: 150px;
+
+  color: white;
+  border: solid 3px yellow;
+  background-color: #131936;
+}
+
+.filtr:first-of-type{
+  margin-bottom: 10px;
+}
+
+.filtr>input{
+  width: 5vw;
+  margin: 5px;
+}
+
+.filtr>input[type="checkbox"]{
+  width: 1vw;
+  height: 1vw;
+}
+
+.filtr>h1{
+  text-align: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+.filtr-button{
+  width: 10vw;
+  height: 2vw;
+  margin: 10px;
+  justify-self: center;
+  align-self: center;
+}
+
+.form-popup {
+  
+  display: none;
+  position: fixed;
+  right: 15px;
+  border: 3px solid yellow;
+  border-radius: 0px 0px 0px 1vw;
+  z-index: 9;
+  font-size: 1vw;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #131936;
+  color: white;
+  border-radius: 0px 0px 0px 1vw;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container input[type=number], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=number]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#editForm {
+  background-color: #131936;
+  height: 600px;
+}
+
+#editForm input {
+  height: 1px;
+  width: 250px;
+}
+
+#editForm button {
+  width: 100px;
+  margin-top: 5px;  
+}
+
+.eksport, .filtrowanie, .dodawanie{
+  text-align: center;
+}
